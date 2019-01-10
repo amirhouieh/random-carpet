@@ -1,0 +1,35 @@
+<html>
+  <head>
+
+  <style type="text/css">
+    body{ background: #000;}
+    canvas{position: absolute;}
+    #status{ position: absolute; top: 20; left: 20; color: white; font-family: helvetica}
+  </style>
+
+  <title>Test</title>
+  <script type="text/javascript" src="js/Pointers.js"></script>
+  <script type="text/javascript" src="js/Canvas.js"></script>
+  <script type="text/javascript" src="js/init.js"></script>
+
+  <script type="text/javascript">
+
+    // frameRate: 60/second
+    window.requestAnimFrame = (function(){
+      return  window.requestAnimationFrame       ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame    ||
+              window.oRequestAnimationFrame      ||
+              window.msRequestAnimationFrame     ||
+              function( callback ){
+                window.setTimeout(callback, 10000);
+              };
+    })();
+    window.onload = initPage;
+  </script>
+
+  </head>
+  <body>
+    <span id="status"></span>
+  </body>
+</html>  
